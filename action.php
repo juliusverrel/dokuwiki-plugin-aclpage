@@ -60,7 +60,7 @@ class action_plugin_aclregex extends DokuWiki_Action_Plugin {
     if (page_exists($add_ACL_id)) {
       $add_ACL = file(wikiFN($add_ACL_id));
       $auth_ACL = array_merge($auth_ACL, $add_ACL);
-      $add_ACL = $this->_replace_placeholders($add_ACL);
+      $auth_ACL = $this->_replace_placeholders($auth_ACL);
       /* TBD: consider also handling regex */
      }
     
