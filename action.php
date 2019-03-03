@@ -61,7 +61,7 @@ class action_plugin_aclpage extends DokuWiki_Action_Plugin {
       $add_ACL = file(wikiFN($add_ACL_id));
       $auth_ACL = array_merge($auth_ACL, $add_ACL);
      }
-    $add_ACL = $this->getConf('add_acl');
+    $add_ACL = preg_split('/\R/',$this->getConf('add_acl'));
     $auth_ACL = array_merge($auth_ACL, $add_ACL);
     
     $auth_ACL = $this->_replace_placeholders($auth_ACL);
