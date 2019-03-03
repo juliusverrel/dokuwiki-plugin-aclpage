@@ -13,7 +13,7 @@ if(!defined('DOKU_INC')) die();
 /* import auth.php, to call the original function auth_aclcheck_cb */
 require_once(DOKU_INC . 'inc/auth.php');
 
-class action_plugin_aclregex extends DokuWiki_Action_Plugin {
+class action_plugin_aclpage extends DokuWiki_Action_Plugin {
 
   /**
    * Register handlers with DokuWiki's event system
@@ -23,7 +23,7 @@ class action_plugin_aclregex extends DokuWiki_Action_Plugin {
    * @return  not required
    */
   public function register(Doku_Event_Handler $controller) {
-    $controller->register_hook('AUTH_ACL_CHECK', 'BEFORE', $this, '_handle_aclregex_check');
+    $controller->register_hook('AUTH_ACL_CHECK', 'BEFORE', $this, '_handle_aclpage');
   }
 
   /**
@@ -36,7 +36,7 @@ class action_plugin_aclregex extends DokuWiki_Action_Plugin {
    * 
    * @return  int  AUTH_<X>
    */
-  public function _handle_aclregex_check(Doku_Event $event, $param) { 
+  public function _handle_page(Doku_Event $event, $param) { 
     // Prevent default event to do our own auth check
     $event->preventDefault();
 
