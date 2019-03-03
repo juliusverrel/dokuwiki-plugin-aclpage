@@ -1,7 +1,7 @@
 base    aclregex
-author  Iain Hallam
-email   iain@nineworlds.net
-date    2018-02-25
-name    ACL Regular Expressions
-url     https://www.dokuwiki.org/plugin:aclregex
-desc    Regular expression support for DokuWiki access control lists
+author  Julius Verrel
+email   tjv23@posteo.de
+date    2019-03-03
+name    Add ACL from wiki page
+url     https://www.dokuwiki.org/plugin:aclpage
+desc    Allows adding ACL rules by editing a wiki page.
