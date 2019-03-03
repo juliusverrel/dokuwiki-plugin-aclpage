@@ -60,9 +60,13 @@ class action_plugin_aclpage extends DokuWiki_Action_Plugin {
     if (page_exists($add_ACL_id)) {
       $add_ACL = file(wikiFN($add_ACL_id));
       $auth_ACL = array_merge($auth_ACL, $add_ACL);
-      $auth_ACL = $this->_replace_placeholders($auth_ACL);
-      /* TBD: consider also handling regex */
      }
+    $add_ACL = $this->getConf('add_acl');
+    $auth_ACL = array_merge($auth_ACL, $add_ACL);
+    
+    $auth_ACL = $this->_replace_placeholders($auth_ACL);
+    /* TBD: consider also handling regex */
+    
     
     // temporarily set global $AUTH_ACL to new value, then call auth_aclcheck_cb, then set to original
     $orig_auth_ACL = $AUTH_ACL;
