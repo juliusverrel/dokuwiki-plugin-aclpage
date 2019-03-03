@@ -3,8 +3,8 @@ Add ACL rules from wiki page and configuration settings
 
 In addition to the ACL rules (usually) defined in conf/auth.acl.php, this plugin imports ACL rules from
 
-* a wiki page, defined in configuration manager (default: ``admin:add_acl``)
-* a multiline string, defined in configuration manager
+* a wiki page (default: ``admin:add_acl``) defined in configuration manager (field: ``add_acl_page``)
+* a multiline string (default: ``''``), defined in configuration manager (field: `add_acl`)
 
 Moreover, additional placeholders (in addition to %GROUP% and %USER%) are defined for page ids: 
 
