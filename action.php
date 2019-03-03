@@ -36,7 +36,7 @@ class action_plugin_aclpage extends DokuWiki_Action_Plugin {
    * 
    * @return  int  AUTH_<X>
    */
-  public function _handle_page(Doku_Event $event, $param) { 
+  public function _handle_aclpage(Doku_Event $event, $param) { 
     // Prevent default event to do our own auth check
     $event->preventDefault();
 
