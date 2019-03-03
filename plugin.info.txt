@@ -1,4 +1,4 @@
-base    aclregex
+base    aclpage
 author  Julius Verrel
 email   tjv23@posteo.de
 date    2019-03-03
