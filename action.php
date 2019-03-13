@@ -110,7 +110,7 @@ class action_plugin_aclpage extends DokuWiki_Action_Plugin {
               $email_parts = preg_split("/@/", $email);
               $email_short = $email_parts[0];
               if (preg_match('/student/', $email_parts[1])) {
-                  $email_short = $email_short.'_student';
+                  $email_short = $email_short.'.stud';
               }
           
               $id   = str_replace('%EMAIL%',cleanID($email),$id);
